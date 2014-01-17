@@ -293,6 +293,23 @@ $('.flexslider').flexslider({
 //GoogleMapInit();
 //ShowPins();  
 
+
+/* ==========================================================================
+   Baidu 统计
+========================================================================== */
+var js = "var _bdhmProtocol = ((\"https:\" == document.location.protocol) ? \" https://\" : \" http://\");";
+js += 'document.write(unescape("%3Cscript src=\'" + _bdhmProtocol + "hm.baidu.com/h.js%3F7fca97cd3a89e835a33b71682abd127b\' type=\'text/javascript\'%3E%3C/script%3E"));';
+addScript(js);
+
+function addScript(js) {
+    var oHead = document.getElementsByTagName('HEAD')[0],
+    oScript = document.createElement('script');
+    oScript.type = 'text/javascript';
+    oScript.text = js;
+    oHead.appendChild(oScript);
+}
+
+
 /* ==========================================================================
    Mobile Navigation
    ========================================================================== */
