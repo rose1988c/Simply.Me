@@ -305,7 +305,7 @@ js_google += "_gaq.push(['_setAccount', 'UA-47249619-1']);";
 js_google += "_gaq.push(['_trackPageview']);";
 js_google += "function googleAnalytics(){";
 js_google += "        var ga = document.createElement('script');ga.type = 'text/javascript';";
-js_google += "        ga.async = true;ga.src = 'https://ssl.google-analytics.com/ga.js_google';";
+js_google += "        ga.async = true;ga.src = 'https://ssl.google-analytics.com/ga.js';";
 js_google += "        var s = document.getElementsByTagName('script')[0];";
 js_google += "        s.parentNode.insertBefore(ga, s)";
 js_google += "}";
