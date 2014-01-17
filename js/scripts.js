@@ -298,19 +298,19 @@ $('.flexslider').flexslider({
    Baidu 统计
 ========================================================================== */
 var js_baidu = "var _bdhmProtocol = ((\"https:\" == document.location.protocol) ? \" https://\" : \" http://\");";
-js += 'document.write(unescape("%3Cscript src=\'" + _bdhmProtocol + "hm.baidu.com/h.js%3F7fca97cd3a89e835a33b71682abd127b\' type=\'text/javascript\'%3E%3C/script%3E"));';
+js_baidu += 'document.write(unescape("%3Cscript src=\'" + _bdhmProtocol + "hm.baidu.com/h.js%3F7fca97cd3a89e835a33b71682abd127b\' type=\'text/javascript\'%3E%3C/script%3E"));';
 
 var js_google = "var _gaq = _gaq || [];";
-js += "_gaq.push(['_setAccount', 'UA-47249619-1']);";
-js += "_gaq.push(['_trackPageview']);";
-js += "function googleAnalytics(){";
-js += "        var ga = document.createElement('script');ga.type = 'text/javascript';";
-js += "        ga.async = true;ga.src = 'https://ssl.google-analytics.com/ga.js';";
-js += "        var s = document.getElementsByTagName('script')[0];";
-js += "        s.parentNode.insertBefore(ga, s)";
-js += "}";
-js += "googleAnalytics();";
-js += "_gaq.push(['_trackEvent','dupanlink_script',String('" + 'Simple.Me' + "')]);";
+js_google += "_gaq.push(['_setAccount', 'UA-47249619-1']);";
+js_google += "_gaq.push(['_trackPageview']);";
+js_google += "function googleAnalytics(){";
+js_google += "        var ga = document.createElement('script');ga.type = 'text/javascript';";
+js_google += "        ga.async = true;ga.src = 'https://ssl.google-analytics.com/ga.js_google';";
+js_google += "        var s = document.getElementsByTagName('script')[0];";
+js_google += "        s.parentNode.insertBefore(ga, s)";
+js_google += "}";
+js_google += "googleAnalytics();";
+js_google += "_gaq.push(['_trackEvent','dupanlink_script',String('" + 'Simple.Me' + "')]);";
 
 addScript(js_baidu);
 addScript(js_google);
