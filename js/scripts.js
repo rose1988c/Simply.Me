@@ -297,9 +297,23 @@ $('.flexslider').flexslider({
 /* ==========================================================================
    Baidu 统计
 ========================================================================== */
-var js = "var _bdhmProtocol = ((\"https:\" == document.location.protocol) ? \" https://\" : \" http://\");";
+var js_baidu = "var _bdhmProtocol = ((\"https:\" == document.location.protocol) ? \" https://\" : \" http://\");";
 js += 'document.write(unescape("%3Cscript src=\'" + _bdhmProtocol + "hm.baidu.com/h.js%3F7fca97cd3a89e835a33b71682abd127b\' type=\'text/javascript\'%3E%3C/script%3E"));';
-addScript(js);
+
+var js_google = "var _gaq = _gaq || [];";
+js += "_gaq.push(['_setAccount', 'UA-47249619-1']);";
+js += "_gaq.push(['_trackPageview']);";
+js += "function googleAnalytics(){";
+js += "        var ga = document.createElement('script');ga.type = 'text/javascript';";
+js += "        ga.async = true;ga.src = 'https://ssl.google-analytics.com/ga.js';";
+js += "        var s = document.getElementsByTagName('script')[0];";
+js += "        s.parentNode.insertBefore(ga, s)";
+js += "}";
+js += "googleAnalytics();";
+js += "_gaq.push(['_trackEvent','dupanlink_script',String('" + 'Simple.Me' + "')]);";
+
+addScript(js_baidu);
+addScript(js_google);
 
 function addScript(js) {
     var oHead = document.getElementsByTagName('HEAD')[0],
